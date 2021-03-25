@@ -1,0 +1,22 @@
+<% if @error %>
+  <li><%= @error %></li>
+<% end %>
+
+<h1>Log In</h1>
+
+<%= form_for :user, url: login_path do |f| %>
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username, required: true %>
+  </p>
+  <p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
+  </p>
+    <%= f.submit "Log In" %>
+  <p>
+  </p>
+<% end %>
+  
+<%= link_to "Back to Home", root_path %>
